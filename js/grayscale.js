@@ -35,9 +35,15 @@ $('.navbar-collapse ul li a').click(function() {
 });
 
 // Getting Quote from Quotes on Design
-$.getJSON("http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&_jsonp=?",function(a){
+// $.getJSON("http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&_jsonp=?",function(a){
+//   $(".quote").append(a[0].content + "<p>- " + a[0].title + "</p>")
+// });
+
+
+$.getJSON("http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1", function(a){
   $(".quote").append(a[0].content + "<p>- " + a[0].title + "</p>")
 });
+
 
 // Google Maps Scripts
 var map = null;
