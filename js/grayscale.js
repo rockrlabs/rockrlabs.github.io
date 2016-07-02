@@ -35,15 +35,19 @@ $('.navbar-collapse ul li a').click(function() {
 });
 
 // Getting Quote from Quotes on Design
-// $.getJSON("http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&_jsonp=?",function(a){
-//   $(".quote").append(a[0].content + "<p>- " + a[0].title + "</p>")
-// });
+/* $.getJSON("http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&_jsonp=?",function(a){
+   $(".quote").append(a[0].content + "<p>- " + a[0].title + "</p>")
+ });
 
 
 $.getJSON("http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1", function(a){
   $(".quote").append(a[0].content + "<p>- " + a[0].title + "</p>")
 });
+*/
 
+$.getJSON("https://www.joyalstudios.com/quotes", function(a){
+  $(".quote").append(a[0].content + "<p>- " + a[0].title + "</p>")
+});
 
 // Google Maps Scripts
 var map = null;
@@ -68,7 +72,7 @@ function init() {
         scrollwheel: false,
         draggable: false,
 
-        // How you would like to style the map. 
+        // How you would like to style the map.
         // This is where you would paste any style found on Snazzy Maps.
         styles: [{
             "featureType": "water",
@@ -180,7 +184,7 @@ function init() {
         }]
     };
 
-    // Get the HTML DOM element that will contain your map 
+    // Get the HTML DOM element that will contain your map
     // We are using a div with id="map" seen below in the <body>
     var mapElement = document.getElementById('map');
 
