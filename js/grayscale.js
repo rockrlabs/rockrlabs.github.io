@@ -45,7 +45,7 @@ $.getJSON("http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[p
 });
 */
 
-$.getJSON("https://www.joyalstudios.com/quotes", function(a){
+$.getJSON("https://www.joyalstudios.com/quotes/", function(a){
   $(".quote").append(a[0].content + "<p>- " + a[0].title + "</p>")
 });
 
