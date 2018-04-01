@@ -39,15 +39,15 @@ $.getJSON("https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[
    $(".quote").append(a[0].content + "<p>- " + a[0].title + "</p>")
  });
 
+// Print the Copyright message with the current year
+$(function() {
+    n =  new Date();
+    y = n.getFullYear();
+    m = n.getMonth() + 1;
+    d = n.getDate();
+    document.getElementById("copyright-date").innerHTML = "Copyright &copy; Rockr Labs " + y;
+});
 
-//$.getJSON("http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1", function(a){
-//  $(".quote").append(a[0].content + "<p>- " + a[0].title + "</p>")
-//});
-
-
-//$.getJSON("https://www.joyalstudios.com/quotes/", function(a){
-//  $(".quote").append(a[0].content + "<p>- " + a[0].title + "</p>")
-//});
 
 // Google Maps Scripts
 var map = null;
