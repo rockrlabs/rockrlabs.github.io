@@ -35,29 +35,29 @@ $('.navbar-collapse ul li a').click(function() {
 });
 
 // Getting Quote from Quotes on Design
-/* $.getJSON("http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&_jsonp=?",function(a){
+$.getJSON("http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&_jsonp=?",function(a){
    $(".quote").append(a[0].content + "<p>- " + a[0].title + "</p>")
  });
 
 
-$.getJSON("http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1", function(a){
-  $(".quote").append(a[0].content + "<p>- " + a[0].title + "</p>")
-});
-*/
+//$.getJSON("http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1", function(a){
+//  $(".quote").append(a[0].content + "<p>- " + a[0].title + "</p>")
+//});
 
-$.getJSON("https://www.joyalstudios.com/quotes/", function(a){
-  $(".quote").append(a[0].content + "<p>- " + a[0].title + "</p>")
-});
+
+//$.getJSON("https://www.joyalstudios.com/quotes/", function(a){
+//  $(".quote").append(a[0].content + "<p>- " + a[0].title + "</p>")
+//});
 
 // Google Maps Scripts
 var map = null;
 // When the window has finished loading create our google map below
-google.maps.event.addDomListener(window, 'load', init);
-google.maps.event.addDomListener(window, 'resize', function() {
-    map.setCenter(new google.maps.LatLng(40.6700, -73.9400));
-});
+//google.maps.event.addDomListener(window, 'load', init);
+//google.maps.event.addDomListener(window, 'resize', function() {
+//    map.setCenter(new google.maps.LatLng(40.6700, -73.9400));
+//});
 
-function init() {
+function myMap() {
     // Basic options for a simple Google Map
     // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
     var mapOptions = {
